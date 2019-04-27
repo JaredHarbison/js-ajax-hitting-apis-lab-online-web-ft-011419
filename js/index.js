@@ -46,3 +46,11 @@ function displayBranches() {
 
     document.getElementById('details').innerHTML = branchesList;
 }
+
+function getRepositories() {
+    const req = new XMLHttpRequest() 
+    const user = document.getElementById("username").value 
+    req.addEventListener("load", displayRepositories)
+    req.open("GET", `https://api.github.com/users/${user}/repos`)
+    req.send()
+}
