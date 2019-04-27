@@ -20,15 +20,15 @@ function displayCommits() {
     const commitsList = `<ul>${
         commits.map(
             commit =>
-                '<li><strong>' + 
-                commit.author.login + 
-                '</strong> - ' +
-                commit.commit.author.name + 
-                ' - ' + 
-                commit.commit.message + 
+                '<li><strong>' +
+                commit.author.login +
+                '</strong> - ' + 
+                commit.commit.author.name +
+                ' - ' +
+                commit.commit.message +
                 '</li>'
         )
-        .join('')}</ul
-        
+        .join('')}</ul>`;
+
     document.getElementById('details').innerHTML = commitsList;
 }
