@@ -13,6 +13,5 @@ function displayRepositories() {
                 '" onclick="getCommits(this)">Get Commits</a></li>'
                 )
         .join('')}</ul>`;
-
     document.getElementById("repositories").innerHTML = repoList;
 }
