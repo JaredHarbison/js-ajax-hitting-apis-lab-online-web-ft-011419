@@ -9,6 +9,6 @@ function displayRepositories() {
                 r.html_url + 
                 '" data-repo = "' +
                 r.name +
-                '" onclick="getCommits(this)">Get Commits</a>
-      )
+                '" onclick="getCommits(this)">Get Commits</a></li>'
+                )
 }
