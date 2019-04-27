@@ -54,3 +54,15 @@ function getRepositories() {
     req.open("GET", `https://api.github.com/users/${user}/repos`)
     req.send()
 }
+
+function getCommit(element) {
+  const name = element.dataset.repository 
+  const req = new XMLHttpRequest() 
+  const user = document.getElementById("username").value
+  req.addEventListener('load', displayCommits)
+  req.open(
+    "GET", 
+    `https://api.github.com/repos/${user}/` + name + "/commits"
+    )
+    req.send()
+}
