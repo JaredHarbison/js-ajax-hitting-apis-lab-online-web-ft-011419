@@ -75,6 +75,6 @@ function getBranches(element) {
     req.open(
         "GET",
         `https://api.github.com/repos/${user}/` + name + "/branches"
-    )
+        )
     req.send()
 }
