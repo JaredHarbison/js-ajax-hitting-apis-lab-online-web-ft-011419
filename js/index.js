@@ -66,3 +66,15 @@ function getCommits(element) {
     )
     req.send()
 }
+
+function getBranches(element) {
+    const name = element.dataset.repository
+    const req = new XMLHttpRequest()
+    const user = document.getElementById("username").value
+    req.addEventListener("load", displayBranches)
+    req.open(
+      "GET", 
+      `https://api.github.com/repos/${user}/` + name + "/branches"
+      )
+    req.send()
+}
