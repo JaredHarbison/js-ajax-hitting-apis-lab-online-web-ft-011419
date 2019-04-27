@@ -73,8 +73,8 @@ function getBranches(element) {
     const user = document.getElementById("username").value
     req.addEventListener("load", displayBranches)
     req.open(
-      "GET", 
-      `https://api.github.com/repos/${user}/` + name + "/branches"
-      )
+        "GET",
+        `https://api.github.com/repos/${user}/` + name + "/branches"
+    )
     req.send()
 }
