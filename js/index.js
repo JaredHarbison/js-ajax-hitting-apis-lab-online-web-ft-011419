@@ -1,6 +1,5 @@
 function displayRepositories() {
     var repos = JSON.parse(this.responseText);
-    // console.log(this.responseText);
     const repoList = `<ul>${
         repos.map(
             r =>
@@ -14,4 +13,8 @@ function displayRepositories() {
                 )
         .join('')}</ul>`;
     document.getElementById("repositories").innerHTML = repoList;
+}
+
+function displayCommits() {
+    
 }
